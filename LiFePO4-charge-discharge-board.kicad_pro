@@ -240,7 +240,16 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "power_pin_not_driven|914400|406400|06081362-936e-4ab4-b5a0-8a3d2c4e22fb|00000000-0000-0000-0000-000000000000|/056499e0-61c7-479e-bb9f-a399b49b6b9f|/056499e0-61c7-479e-bb9f-a399b49b6b9f|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|965200|838200|b5ddd2ba-dd4c-431b-9a46-8a53ad294918|00000000-0000-0000-0000-000000000000|/056499e0-61c7-479e-bb9f-a399b49b6b9f|/056499e0-61c7-479e-bb9f-a399b49b6b9f|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -461,8 +470,12 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_footprint_libs": [
+      "Marcus_Connectors"
+    ],
+    "pinned_symbol_libs": [
+      "Marcus_Connectors"
+    ]
   },
   "meta": {
     "filename": "LiFePO4-charge-discharge-board.kicad_pro",
@@ -574,12 +587,60 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "LABEL",
+          "name": "LABEL",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Name",
+          "name": "Manufacturer_Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Price/Stock",
+          "name": "Mouser Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
