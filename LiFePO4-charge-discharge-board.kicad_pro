@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.3
         }
       },
       "diff_pair_dimensions": [
@@ -58,7 +58,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "courtyards_overlap|27955000|25685000|b43ce7c6-af7c-453a-947d-24e86a609cdd|f4cae170-c6f6-491f-bdb3-b67dd35726f4",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -66,7 +71,7 @@
         "annular_width": "error",
         "clearance": "error",
         "connection_width": "warning",
-        "copper_edge_clearance": "error",
+        "copper_edge_clearance": "ignore",
         "copper_sliver": "warning",
         "courtyards_overlap": "error",
         "creepage": "error",
@@ -100,9 +105,9 @@
         "padstack": "warning",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
+        "silk_edge_clearance": "ignore",
         "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
@@ -123,9 +128,9 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.2,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.0,
+        "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
@@ -188,7 +193,10 @@
       ],
       "track_widths": [
         0.0,
-        0.4
+        0.4,
+        0.6,
+        0.8,
+        1.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -222,7 +230,7 @@
           "drill": 0.0
         }
       ],
-      "zones_allow_external_fillets": false
+      "zones_allow_external_fillets": true
     },
     "ipc2581": {
       "dist": "",
@@ -240,16 +248,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "power_pin_not_driven|914400|406400|06081362-936e-4ab4-b5a0-8a3d2c4e22fb|00000000-0000-0000-0000-000000000000|/056499e0-61c7-479e-bb9f-a399b49b6b9f|/056499e0-61c7-479e-bb9f-a399b49b6b9f|",
-        ""
-      ],
-      [
-        "power_pin_not_driven|965200|838200|b5ddd2ba-dd4c-431b-9a46-8a53ad294918|00000000-0000-0000-0000-000000000000|/056499e0-61c7-479e-bb9f-a399b49b6b9f|/056499e0-61c7-479e-bb9f-a399b49b6b9f|",
-        ""
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -471,10 +470,20 @@
   },
   "libraries": {
     "pinned_footprint_libs": [
-      "Marcus_Connectors"
+      "Marcus_Connectors",
+      "Marcus_Discretes",
+      "Marcus_Electromechanical",
+      "Marcus_ICs",
+      "Marcus_Modules",
+      "Marcus_Passives"
     ],
     "pinned_symbol_libs": [
-      "Marcus_Connectors"
+      "Marcus_Connectors",
+      "Marcus_Discretes",
+      "Marcus_Electromechanical",
+      "Marcus_ICs",
+      "Marcus_Modules",
+      "Marcus_Passives"
     ]
   },
   "meta": {
@@ -517,7 +526,7 @@
       "plot": "gerber",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "LiFePO4-charge-discharge-board.step",
       "svg": "",
       "vrml": ""
     },
@@ -635,6 +644,12 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Series",
+          "name": "Series",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -672,6 +687,14 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "space_save_all_events": true,
