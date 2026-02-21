@@ -6412,8 +6412,8 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "LiFePO4\ncharge-discharge\nModule V1.0"
-		(at 36.07 26.96 0)
+	(gr_text "XIAO-LiFePO4\nPower-Module\nV1.0"
+		(at 36.1 29.3 0)
 		(layer "B.SilkS")
 		(uuid "632f0105-dd40-4658-87c5-3ac3caa1c2e6")
 		(effects
