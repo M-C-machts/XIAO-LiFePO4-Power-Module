@@ -1404,19 +1404,6 @@
 			(layer "F.CrtYd")
 			(uuid "dea59f16-6d0a-4cc5-b65b-b4833a89aea5")
 		)
-		(fp_text user "${LABEL}"
-			(at -3.13 5.685 90)
-			(unlocked yes)
-			(layer "F.SilkS")
-			(uuid "5e3b2382-cedb-4f90-ade2-696acaeb3009")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify left bottom)
-			)
-		)
 		(fp_text user "${REFERENCE}"
 			(at -0.75 3.6 0)
 			(layer "F.Fab")
@@ -6304,8 +6291,8 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "B+ B-"
-		(at 21.2 32.63 0)
+	(gr_text "B+    B-"
+		(at 20.5 37.3 0)
 		(layer "F.SilkS")
 		(uuid "2ed8bedc-77b2-46bb-bf2e-5a29933b1acd")
 		(effects
